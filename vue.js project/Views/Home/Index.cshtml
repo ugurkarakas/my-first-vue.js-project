@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="card-body">
+    <div class="row">
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3" v-for="product in products">
+            <div class="card card-custom gutter-b card-stretch">
+                <div class="card-body pt-4">
+                    <div class="d-flex justify-content-end align-items-center mb-2">
+                        <img class="card-img headimage" src="../Content/assets/media/{{ product.img }}">
+                    </div>
+                    <div class="d-flex flex-column mb-4"><span class="basetext text-muted textbox">{{ product.name }}</span></div>
+                    <div class="d-flex align-items-center mb-7">
+                        <div class="mb-7">
+                            <div class="my-1">
+                                <span class="price">₹ {{ product.price }}</span>
+                                <span class="mr-3 btn btn-O basketbutton" role="button" v-on:click="addProduct(product)">ADD BASKET</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card-body">
+            <hr class="w-75" />
+            <p class="defaulttext">MY CART (<span>{{product.}}{{cartProducts.length >= 1 ? cartProducts.length : "Shopping cart is empty."}}</span>)</p>
+            @*<component v-bind:is="component"></component>*@
+            <div class="row">
+                <div class="col-xl-7 col-lg-6 col-md-6 col-sm-6 mb-3" v-for="product in cartProducts">
+                    <div class="card card-custom gutter-b">
+                        <div class="card card-custom card-stretch ">
+                            <!--begin::Body-->
+                            <div class="card-body pt-4">
+                                <!--end::Toolbar-->
+                                <!--begin::User-->
+                                <div class="d-flex align-items-center">
+                                    <div class="row mb-3">
+                                        <div class="col-lg-3">
+                                            <img class="card-img mb-2" src="../Content/assets/media/{{ product.img }}">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="navi-item mbtext">
+                                                <span class="basetext mbtext text-muted textbox">{{ product.name }}</span>
+                                            </div>
+                                            <div class="navi-item">
+                                                <span class="pricecart">₹ {{ product.price }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="d-flex">
+                                        <div class="mr-3">
+                                            <button class="buttonsourplus rounded-circle" v-on:click="sourProduct(product)">-</button>
+                                            <input class="w-25 textarea" value="{{ product.qty }}" />
+                                            <button class="buttonsourplus rounded-circle" v-on:click="addProduct(product)">+</button>
+                                        </div>
+                                        <span class="fw-bolder" v-on:click="removeProduct(product)">REMOVE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <buttons></buttons>
+            </div>
+        </div>
+    </div>
+</div>

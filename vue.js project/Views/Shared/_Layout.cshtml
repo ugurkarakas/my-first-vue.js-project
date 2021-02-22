@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="../Content/assets/css/bootstrap.css" rel="stylesheet" />
+    @Styles.Render("~/Content/assets/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container" id="cart">
+        @RenderBody()
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <link href="../Content/assets/css/app.css" rel="stylesheet" />
+    <script src="../Content/assets/js/bootstrap.js"></script>
+    <script src="../Content/assets/js/jquery-3.5.1.min.js"></script>
+    <script src="../Content/assets/js/vue.min.js"></script>
+    <script src="../Content/assets/js/vueapp.js"></script>
+</body>
+</html>

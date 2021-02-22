@@ -1,0 +1,32 @@
+{
+  "cart": [
+    {
+      "id": 0,
+      "name": "Chevron Tempered Glass Guard for Lenovo K6 Power", // Ürünün Adý
+      "img": "product1.jpeg", // Ürünün Fotoðrafý
+      "price": 20, // Ürününü Fiyatý
+      "isAvailable": true,
+      "isEligible": true
+    },
+    {
+      "id": 1,
+      "name": "Kajal Sarees Printed Bhagalpuri Art Silk Sari", // Ürünün Adý
+      "img": "product2.jpg", // Ürünün Fotoðrafý
+      "price": 40, // Ürününü Fiyatý
+      "isAvailable": true,
+      "isEligible": true
+    }
+  ],
+  "saved": [
+    {
+      {
+        "id": 2,
+        "name": "Indian Polity 5 Edition", // Ürünün Adý
+        "img": "product3.jpg", // Ürünün Fotoðrafý
+        "price": 6, // Ürününü Fiyatý
+        "isAvailable": true,
+        "isEligible": true
+      }
+    }
+  ]
+}
